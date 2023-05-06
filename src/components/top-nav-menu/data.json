@@ -1,0 +1,28 @@
+{
+  "links": [
+    {
+      "name": "Home",
+      "href": "#"
+    },
+    {
+      "name": "About",
+      "href": "#"
+    },
+    {
+      "name": "Projects",
+      "href": "#"
+    },
+    {
+      "name": "Services",
+      "href": "#"
+    },
+    {
+      "name": "Teams",
+      "href": "#"
+    },
+    {
+      "name": "Contact",
+      "href": "#"
+    }
+  ]
+}
