@@ -1,0 +1,8 @@
+@import "../../../assets/scss/variables.scss";
+
+.block-cta {
+  display: none;
+  @media (min-width: 992px) {
+    display: block;
+  }
+}
