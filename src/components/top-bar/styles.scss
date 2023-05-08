@@ -9,20 +9,6 @@
   align-items: center;
 }
 
-.block-logo {
-  display: flex;
-  flex-direction: row;
-
-  a {
-    font-size: 14px;
-    font-family: "Montserrat Subrayada", sans-serif;
-    color: white;
-    @media (min-width: 992px) {
-      font-size: 22px;
-    }
-  }
-}
-
 .block-btn-nav {
   display: block;
   @media (min-width: 992px) {

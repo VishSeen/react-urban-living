@@ -1,0 +1,15 @@
+@import "../../../assets/scss/variables.scss";
+
+.block-logo {
+  display: flex;
+  flex-direction: row;
+
+  a {
+    font-size: 14px;
+    font-family: $font-logo;
+    color: white;
+    @media (min-width: 992px) {
+      font-size: 22px;
+    }
+  }
+}
