@@ -1,10 +1,6 @@
 import data from "./data.json";
 
 const TopNavMenu = () => {
-  data.links.forEach((element) => {
-    console.log(element);
-  });
-
   return (
     <div className="menu-container">
       <ul>
