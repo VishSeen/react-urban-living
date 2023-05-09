@@ -1,20 +1,20 @@
 import { useState } from "react";
+import Logo from "../common/logo/logo";
 import NavBar from "../nav-bar/nav-bar";
 import ButtonCta from "../common/button/button-cta";
 import "./styles.scss";
 
-const Logo = () => {
-  return (
-    <div className="block-logo">
-      <a href="#">urban living</a>
-    </div>
-  );
-};
-
 const TopBar = () => {
   const [isOpen, setOpen] = useState(false);
+  const [menuIcon, setMenuIcon] = useState("menu");
 
   const openNav = () => {
+    if (isOpen) {
+      setMenuIcon("menu");
+    } else {
+      setMenuIcon("close");
+    }
+
     setOpen(!isOpen);
   };
 
@@ -26,7 +26,7 @@ const TopBar = () => {
 
       <div className="block-btn-nav">
         <button onClick={openNav}>
-          <i className="material-icons">menu</i>
+          <i className="material-icons">{menuIcon}</i>
         </button>
       </div>
 

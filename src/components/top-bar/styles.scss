@@ -1,25 +1,18 @@
 @import "../../assets/scss/variables.scss";
 
 .top-bar {
-  width: 100%;
-  border: 1px solid white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 12px 6px;
   padding: 12px 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.block-logo {
-  display: flex;
-  flex-direction: row;
-
-  a {
-    font-size: 14px;
-    font-family: "Montserrat Subrayada", sans-serif;
-    color: white;
-    @media (min-width: 992px) {
-      font-size: 22px;
-    }
+  @media (min-width: 992px) {
+    margin: 20px 30px;
   }
 }
 
