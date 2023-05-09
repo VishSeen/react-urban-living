@@ -5,9 +5,9 @@
   flex-direction: row;
 
   a {
-    font-size: 14px;
+    font-size: 18px;
     font-family: $font-logo;
-    color: white;
+    color: $primary-text-color-white;
     @media (min-width: 992px) {
       font-size: 22px;
     }

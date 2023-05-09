@@ -6,8 +6,15 @@ import "./styles.scss";
 
 const TopBar = () => {
   const [isOpen, setOpen] = useState(false);
+  const [menuIcon, setMenuIcon] = useState("menu");
 
   const openNav = () => {
+    if (isOpen) {
+      setMenuIcon("menu");
+    } else {
+      setMenuIcon("close");
+    }
+
     setOpen(!isOpen);
   };
 
@@ -19,7 +26,7 @@ const TopBar = () => {
 
       <div className="block-btn-nav">
         <button onClick={openNav}>
-          <i className="material-icons">menu</i>
+          <i className="material-icons">{menuIcon}</i>
         </button>
       </div>
 

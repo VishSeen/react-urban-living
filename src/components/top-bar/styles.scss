@@ -1,12 +1,19 @@
 @import "../../assets/scss/variables.scss";
 
 .top-bar {
-  width: 100%;
-  border: 1px solid white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 12px 6px;
   padding: 12px 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: 992px) {
+    margin: 20px 30px;
+  }
 }
 
 .block-btn-nav {
