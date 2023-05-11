@@ -13,6 +13,7 @@
   padding: 12px 14px;
   color: $primary-text-color-white;
   background-color: $background-dark;
+
   &.active {
     display: block;
   }
@@ -43,6 +44,10 @@
   padding-left: 0;
   display: flex;
 
+  @media (min-width: 992px) {
+    padding: 16px 20px;
+  }
+
   a {
     display: flex;
     align-items: center;
@@ -61,5 +66,16 @@
         display: none;
       }
     }
+  }
+}
+
+.nav-footer {
+  display: flex;
+  @media (min-width: 992px) {
+    display: none;
+  }
+
+  .block-cta {
+    display: block;
   }
 }
