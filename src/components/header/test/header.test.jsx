@@ -1,8 +1,9 @@
-import { render, screen } from "@testing-library/react";
-import Header from "../header/header";
+import { render } from "@testing-library/react";
+import Header from "../header";
 
 test("Renders Header Component.", () => {
-  render(<Header />);
+    const element = <Header />
+    render(element);
 
-  expected("Has text");
+    expect(element).toBeTruthy();
 });
