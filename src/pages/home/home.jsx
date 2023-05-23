@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <>
       <TopBar />
-      <HeaderBanner />
+      <HeaderBanner title="urban living" />
     </>
   );
 };
