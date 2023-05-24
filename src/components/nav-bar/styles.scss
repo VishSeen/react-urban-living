@@ -33,6 +33,7 @@
   display: block;
   text-align: start;
   margin: 0;
+  overflow: hidden;
   @media (min-width: 992px) {
     display: flex;
   }
@@ -43,7 +44,6 @@
   padding: 16px;
   padding-left: 0;
   display: flex;
-
   @media (min-width: 992px) {
     padding: 16px 20px;
   }
@@ -52,9 +52,30 @@
     display: flex;
     align-items: center;
     font-size: 30px;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out;
     @media (min-width: 992px) {
       display: block;
       font-size: 16px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      background-color: $primary-text-color-white;
+      width: 0;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      transition: width 0.2s ease;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+
+    &.animate {
+      transform: translateY(0);
     }
 
     span {
