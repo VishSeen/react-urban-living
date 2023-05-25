@@ -1,5 +1,5 @@
 import "./styles.scss";
-import config from "./config.json";
+import config from "./data/config.json";
 
 const HeaderBanner = ({ title }) => {
   return (

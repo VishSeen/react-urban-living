@@ -2,14 +2,14 @@
 
 header {
   position: relative;
-  top: 75px;
+  top: 0;
   height: 560px;
   width: 94%;
   margin: 0px auto;
   overflow: hidden;
 
   @media (min-width: 992px) {
-    top: 115px;
+    top: 0;
   }
 }
 

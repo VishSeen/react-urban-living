@@ -3,7 +3,7 @@
 .nav-bar {
   display: none;
   position: fixed;
-  top: 10%;
+  top: 5%;
   bottom: 0;
   right: 0;
   left: 0;
@@ -53,8 +53,8 @@
     align-items: center;
     font-size: 30px;
     color: $primary-text-color-white;
-    transform: translateY(100px);
-    transition: transform 1s ease-in-out;
+    transform: translateY(50px);
+    transition: transaform 0.7s ease-in-out;
 
     &:hover {
       opacity: 0.5;
