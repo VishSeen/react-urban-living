@@ -1,12 +1,20 @@
 import config from "./data/config.json";
 import "./styles.scss";
 import { useOnScreen } from "../../hooks/use-on-screen/use-on-screen";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const NavBar = ({ isOpen }) => {
   let transDelay = 0;
   const elementRef = useRef(null);
   const isOnScreen = useOnScreen(elementRef);
+
+  useEffect(() => {
+    if (isOnScreen) {
+      elementRef.current.querySelectorAll("a").forEach((element) => {
+        element.classList.add("animate");
+      });
+    }
+  }, [isOnScreen]);
 
   return (
     <div className={`nav-bar ${isOpen ? "active" : ""}`}>
@@ -18,7 +26,6 @@ const NavBar = ({ isOpen }) => {
                 style={{
                   transitionDelay: `${(transDelay = transDelay + 0.2)}s`,
                 }}
-                className={`${isOnScreen ? "animate" : ""}`}
                 href="{item.href}"
               >
                 <span>0{pos + 1}</span>
