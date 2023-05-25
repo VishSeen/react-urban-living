@@ -9,11 +9,11 @@ const NavBar = ({ isOpen }) => {
   const isOnScreen = useOnScreen(elementRef);
 
   useEffect(() => {
-    if (isOnScreen) {
-      elementRef.current.querySelectorAll("a").forEach((element) => {
-        element.classList.add("animate");
-      });
-    }
+    elementRef.current.querySelectorAll("a").forEach((element) => {
+      isOnScreen
+        ? element.classList.add("animate")
+        : element.classList.remove("animate");
+    });
   }, [isOnScreen]);
 
   return (
