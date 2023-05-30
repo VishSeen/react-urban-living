@@ -1,7 +1,7 @@
 import "./styles.scss";
 import config from "./data/config.json";
 
-const HeaderBanner = ({ title }) => {
+const HeaderBanner = () => {
   return (
     <header>
       <div className="fullwidth-banner">
@@ -9,7 +9,13 @@ const HeaderBanner = ({ title }) => {
       </div>
 
       <div className="hero-text">
-        <h1>{title}</h1>
+        <h1>
+          {config.title.map((item) => (
+            <div className="intro-title">
+              <span>{item}</span>
+            </div>
+          ))}
+        </h1>
       </div>
     </header>
   );

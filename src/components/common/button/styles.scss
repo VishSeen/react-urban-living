@@ -1,4 +1,5 @@
 @import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/animations.scss";
 
 .block-cta {
   display: none;
@@ -7,11 +8,16 @@
   }
 
   .btn-cta {
+    opacity: 0;
     padding: 12px 14px;
     color: $primary-text-color-white;
     border: 1px solid $background-white;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, opacity 0.5s ease;
 
+    &.animate {
+      animation: $anim-fade-in 1.2s ease forwards;
+    }
+    
     &:hover {
       background-color: $background-white;
       color: $primary-text-color-dark;
